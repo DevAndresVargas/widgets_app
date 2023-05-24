@@ -17,7 +17,9 @@ class CardScreen extends StatelessWidget {
 
                     CustomCardType1(),
                     SizedBox(height: 10,),
-                    CustomCardType2()
+                    CustomCardType2(imageURL:'http://placekitten.com/300/800',name: 'holi',),
+                    CustomCardType2(imageURL:'http://placekitten.com/800/600'),
+                    CustomCardType2(imageURL:'http://placekitten.com/1920/1080'),
 
                 ],
                 )

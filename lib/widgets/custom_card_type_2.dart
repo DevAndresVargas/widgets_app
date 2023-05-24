@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:widget_app/screens/screens.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({super.key});
+    final String imageURL;
+    final String? name;
+
+  const CustomCardType2({
+      super.key,
+      required  this.imageURL,
+      this.name
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -13,18 +21,19 @@ class CustomCardType2 extends StatelessWidget {
       shadowColor: AppTheme.primary.withOpacity(0.7),
       child: Column(
           children: [
-          const FadeInImage(
-              image: NetworkImage('http://placekitten.com/2000/1100'),
-              placeholder: AssetImage('assets/images/jar-loading.gif'),
+           FadeInImage(
+              image: NetworkImage(imageURL),
+              placeholder: const AssetImage('assets/images/jar-loading.gif'),
               width: double.infinity,
               height: 230,
               fit: BoxFit.cover,
-              fadeInDuration:  Duration(milliseconds: 300),
+              fadeInDuration:  const Duration(milliseconds: 300),
           ),
+          if (name != null)
             Container(
             alignment: AlignmentDirectional.centerEnd,
             padding: const EdgeInsets.only(right: 10,top: 10,bottom: 10),
-            child: Text('pierre el tryhard'))
+            child: Text(name ?? 'pierre el tryhard'))
           ],
           ),
     );
