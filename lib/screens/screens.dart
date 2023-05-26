@@ -1,3 +1,4 @@
+export 'package:widget_app/screens/avatar_screen.dart';
 export 'package:widget_app/themes/app_theme.dart';
 export 'package:widget_app/screens/home_screen.dart';
 export 'package:widget_app/screens/alert_screen.dart';
