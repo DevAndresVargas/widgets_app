@@ -19,6 +19,9 @@ class InputsScreen extends StatelessWidget {
                     autofocus: true,
                     initialValue: 'yo',
                     textCapitalization: TextCapitalization.words,
+                    onChanged: ( value  ){
+                        print('value $value')
+                    },
                         )
 
                     ],
