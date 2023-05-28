@@ -10,6 +10,9 @@ final IconData? suffixIcon;
 final TextInputType? textInputType;
 final bool obscureText;
 
+final String formProperty;
+final Map<String, String> formValues;
+
   const CustomInputField({
       super.key,
       this.hintText,
@@ -19,6 +22,8 @@ final bool obscureText;
       this.suffixIcon,
       this.textInputType,
       this.obscureText= false,
+      required this.formProperty,
+      required this.formValues,
   });
 
   @override
@@ -28,9 +33,7 @@ final bool obscureText;
     initialValue: '',
     textCapitalization: TextCapitalization.words,
     keyboardType: textInputType ,
-    onChanged: ( value  ){
-        print('value $value');
-    },
+    onChanged: ( value  ) => formValues[formProperty] = value,
     validator: (value) {
                           if ( value == null ) return 'este campo es requerido';
                           return value.length < 3 ? 'Minimo tres caracteres' : null;
