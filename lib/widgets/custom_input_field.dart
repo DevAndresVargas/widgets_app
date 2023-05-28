@@ -7,6 +7,8 @@ final String? labelText;
 final String? helperText;
 final IconData? icon;
 final IconData? suffixIcon;
+final TextInputType? textInputType;
+final bool obscureText;
 
   const CustomInputField({
       super.key,
@@ -15,6 +17,8 @@ final IconData? suffixIcon;
       this.helperText,
       this.icon,
       this.suffixIcon,
+      this.textInputType,
+      this.obscureText= false,
   });
 
   @override
@@ -23,6 +27,7 @@ final IconData? suffixIcon;
     autofocus: false,
     initialValue: '',
     textCapitalization: TextCapitalization.words,
+    keyboardType: textInputType ,
     onChanged: ( value  ){
         print('value $value');
     },
@@ -31,6 +36,7 @@ final IconData? suffixIcon;
                           return value.length < 3 ? 'Minimo tres caracteres' : null;
                         },
                         autovalidateMode: AutovalidateMode.onUserInteraction,
+                        obscureText: obscureText,
                         decoration:  InputDecoration(
                           hintText: hintText,
                           labelText: labelText,
