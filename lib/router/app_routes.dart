@@ -16,7 +16,9 @@ class AppRoutes{
     MenuOption(route: 'alert', icon: Icons.warning_amber_rounded, name: 'Alert Screen', screen: const AlertScreen()),
     MenuOption(route: 'avatar', icon: Icons.person, name: 'Avatar Screen', screen: const AvatarScreen()),
     MenuOption(route: 'animated', icon: Icons.animation_rounded, name: 'Animated Screen', screen: const AnimatedScreen()),
-    MenuOption(route: 'inputs', icon: Icons.input, name: 'Inputs Screens', screen: const InputsScreen())
+    MenuOption(route: 'inputs', icon: Icons.input, name: 'Inputs Screens', screen: const InputsScreen()),
+    MenuOption(route: 'slider', icon: Icons.slideshow, name: 'Slider Screens', screen: const SliderScreen()),
+    MenuOption(route: 'listviewbuilder', icon: Icons.build_rounded, name: 'InfiniteScroll & Pull to refresh', screen: const ListViewBuilderScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
