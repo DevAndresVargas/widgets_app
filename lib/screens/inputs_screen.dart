@@ -11,11 +11,11 @@ class InputsScreen extends StatelessWidget {
       final GlobalKey<FormState> myFormKey = GlobalKey<FormState>();
 
       final Map<String, String> formValues={
-          'first_name': 'andres',
-          'last_name': 'vargas',
-          'email': 'andres@mail.com',
-          'password': '12345',
-          'role': 'admin',
+         'first_name'   :   'andres',
+         'last_name'    :   'vargas',
+         'email'        :   'andres@mail.com',
+         'password'     :   '12345',
+         'role'         :   'admin',
       };
 
     return  Scaffold(
@@ -65,6 +65,7 @@ class InputsScreen extends StatelessWidget {
                       const SizedBox( height: 30 , ),
 
 
+// TODO: fix bug DropdownButtonFormField
                       DropdownButtonFormField(
                               items: const [
                               DropdownMenuItem(value: 'Admin', child: Text('Admin')),
